@@ -22,27 +22,27 @@ void draw() {
    scene.endDraw();
 
   rendererAscii(
-    scene, // Input PGraphics object
-    font, // font to use
-    20, // font size
-    " █▛▜▟▙▄▀▐▌▞▚▝▖▗▘", // charset 
-    50, // cols
-    40, // rows
-    width*0.4, // spread
-    #f1f1f1, // background color
-    0); // foreground color
+    scene
+    font
+    20
+    " █▛▜▟▙▄▀▐▌▞▚▝▖▗▘"
+    50
+    40
+    width*0.4
+    #f1f1f1
+    0);
 }
 void rendererAscii(
 
-  PGraphics in, // the input PGraphics object
-  PFont fnt, // the font object
-  float fontSize, // the font size
-  String chars, // the charset to use
-  int tilesX, // the amount of cols
-  int tilesY, // the amount of rows
-  float spread, // the magnitude of the grid from the center
-  color bg, // the background-color
-  color fg // the foreground-color
+  PGraphics in
+  PFont fnt
+  float fontSize
+  String chars
+  int tilesX
+  int tilesY
+  float spread
+  color bg
+  color fg
   ) {
 
   PGraphics pg;

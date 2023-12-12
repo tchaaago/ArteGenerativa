@@ -1,0 +1,28 @@
+PImage img;
+
+void setup(){
+  size(1400,900);
+  
+  img = loadImage("Marcos-Moura-1.jpg");
+  img.resize(width,height);
+  
+}
+
+void draw(){
+  background(0);
+  
+  float spcX = 8;
+  float spcY = 8;
+  
+  for(int x = 0; x < width; x += spcX) {
+    for(int y = 0; y < height; y += spcY) {
+      color c = img.get(x,y);
+    
+      fill(c);
+      noStroke();
+      rect(x,y,spcX,spcY);
+      
+  
+    }
+  }
+} 

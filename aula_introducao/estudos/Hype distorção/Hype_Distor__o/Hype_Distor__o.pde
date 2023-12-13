@@ -11,16 +11,16 @@ void setup() {
 }
 
 void draw() {
-  // Redefinindo fundo preto a cada quadro
+  // Cor de background preto a cada quadro
   background(0);
 
-  // Calculando a escala baseada na posição do mouse
+  // Calcula a escala de acordo com a posição do mouse
   float scaleX = map(mouseX, 0, width, 1, 3);  // Varia entre 1 e 3
   float scaleY = map(mouseY, 0, height, 1, 3); // Varia entre 1 e 3
 
   pushMatrix();
-  translate(width / 2, height / 2); // Centraliza
-  scale(scaleX, scaleY);            // Escala conforme a posição do mouse
+  translate(width / 2, height / 2); // Para centralizar o objeto
+  scale(scaleX, scaleY);            // Escala conforme a posição do mouse (distorce ao mover o cursor)
   textFont(font);
   // Definindo a cor da tipografia para branco
   fill(255);

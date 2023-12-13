@@ -3,7 +3,7 @@ int numParticles = 1000;
 
 class Particle {
   PVector position;
-  int particleColor; // Renomeando para evitar qualquer conflito com a função color
+  int particleColor;
 
   Particle(PVector position, int particleColor) {
     this.position = position;
@@ -11,8 +11,8 @@ class Particle {
   }
 
   void move() {
-    this.position.add(PVector.random3D()); // Move a partícula em uma direção aleatória
-    // Mantém a partícula dentro da janela
+    this.position.add(PVector.random3D()); // A posiçao da partícula se move em direção aleatória
+    // Mantém as bolinhas dentro do canva
     this.position.x = (this.position.x + width) % width;
     this.position.y = (this.position.y + height) % height;
     this.position.z = (this.position.z + 1000) % 1000 - 500;

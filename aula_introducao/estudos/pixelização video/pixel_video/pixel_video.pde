@@ -1,13 +1,12 @@
 PImage img;
-int blockSize = 5; // Tamanho base do bloco
-int minSize = 3;    // Tamanho mínimo do quadrado
-int maxSize = 8;   // Tamanho máximo do quadrado
+int blockSize = 5; 
+int minSize = 3;   
+int maxSize = 8; 
 
 void setup() {
-  size(1202, 1400); // Definindo o tamanho da janela de acordo com a imagem
+  size(1202, 1400); 
   background(255);
 
-  // Carregue sua imagem aqui
   img = loadImage("nord5.png");
 }
 
@@ -16,15 +15,15 @@ void draw() {
 
 for (int y = 0; y < img.height; y += blockSize) {
 for (int x = 0; x < img.width; x += blockSize) {
-color c = img.get(x, y); // Obtém a cor do pixel
+color c = img.get(x, y); 
 
-  float bright = brightness(c); // Obtém o valor de luminância
-  float rectSize = map(bright, 0, 255, minSize, maxSize); // Mapeia a luminosidade para um tamanho de quadrado
+  float bright = brightness(c); 
+  float rectSize = map(bright, 0, 255, minSize, maxSize); 
 
-  rectSize += random(-80, 110); // Variação de +/- 5 pixels. Ajuste conforme necessário.
+  rectSize += random(-80, 110); 
 
-  fill(c);  // Define a cor de preenchimento para a cor do pixel
-  noStroke(); // Remove o contorno
+  fill(c);  
+  noStroke(); 
   rect(x, y, rectSize, rectSize);
 }
 }

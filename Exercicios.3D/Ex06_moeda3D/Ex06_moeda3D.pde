@@ -48,6 +48,9 @@ void drawFace(boolean isHappy) {
     arc(0, 30, 100, 50, PI, TWO_PI);
   }
 }
+<<<<<<< HEAD
 
 //(Desisti desse aqui)
 // NAO DEU CERTO AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+=======
+>>>>>>> 4fb3dece6b752498a0c2c6d3d7f6da3bc45a9bad
